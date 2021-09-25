@@ -32,6 +32,15 @@ color:var(--Text);
 font-size: 50px;
 font-family: 'Courier New', Courier, monospace;
 }
+/*view scores button added to footer */
+footer {
+    text-align: center;
+    border-bottom: 40px;
+    padding: 40px;
+    color:var(--Text);
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    }
 /* organize both sections/white boxes */
 main {
 display:flex;

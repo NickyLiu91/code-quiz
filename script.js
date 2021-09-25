@@ -6,10 +6,11 @@ var quizQuestions = [
         choices: "choices",
         answer: "answer coming soon",
     }
+    {
     question: "what is javascript?",
     choices: "choices",
     answer: "answer coming soon",
-        }
+        }{
         question: "what is javascript?",
         choices: "choices",
         answer: "answer coming soon",
@@ -17,6 +18,7 @@ var quizQuestions = [
     question: "what is javascript?",
     choices: "choices",
     answer: "answer coming soon",
+    {
 }
 question:"what is javascript?",
     choices: "choices",
