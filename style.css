@@ -13,7 +13,7 @@ box-sizing: border-box;
 
 /* this include background color */
 body {
-font-family: 'Courier New', Courier, monospace;
+
 margin: 0;
 display: flex;
 flex-direction: column;
@@ -30,6 +30,7 @@ border-bottom: 40px;
 padding: 40px;
 color:var(--Text);
 font-size: 50px;
+font-family: 'Courier New', Courier, monospace;
 }
 /* organize both sections/white boxes */
 main {
@@ -61,14 +62,17 @@ button {
 .quiz-results {
     width: 25vw;
     height: 25vw;
+    margin: auto;
 }
 
 /* section the left */
 .quiz-questions {
 width: 60vw;
 height: 25vw;
-height: auto;
+margin: auto;
 text-align:center;
+
+
 
 }
 
@@ -78,30 +82,39 @@ text-align:center;
     height: 70px;
     line-height: 10px;
     margin-top: 10px;
+    
 
 }
 /* section on the right */
 .right-wrong-section{
     color:var(--Text-two);
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
 }
 /* this is diplaying the seconds remaining */
 .timer-count{
 
     color:red;
     font-size: 40px;
-    text-align: center
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
-/* The ready paragraph */
+/* The ready message before button text*/
 .button-initiator{
     color:var(--Text-two); 
     text-align: center;
     font-size: 40px;
    padding: 90px;
-    
+   font-family: 'Courier New', Courier, monospace;
+}
 
+/*begin quzi button*/
+.main-button {
+background-color:white;
+color:var(--Text-two);
 }
 /* this is incorrect/correct anwsers */
 h3 {
@@ -109,6 +122,19 @@ h3 {
     color:var(--Text-two); 
     font-size: 25px;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 
 }
 
+@media screen and (max-width: 992px){
+main {
+    flex-direction: column;
+}
+
+.quiz-results, .quiz-questions {
+
+    width: 20vw;
+}
+
+
+}
