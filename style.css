@@ -1,0 +1,22 @@
+/* colors from colorhunt:https://colorhunt.co/palette/261c2c3e2c415c527f6e85b2 */
+:root {
+--Background: #3E2C41;
+--Text: white;
+}
+
+/* universal */
+* {
+box-sizing: border-box;
+}
+
+/* this include background color */
+body {
+font-family: 'Courier New', Courier, monospace;
+margin: 0;
+display: flex;
+flex-direction: column;
+min-height: 100px;
+justify-content: flex-start;
+background-color: var(--Background);
+}
+
