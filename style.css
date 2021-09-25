@@ -2,6 +2,7 @@
 :root {
 --Background: #3E2C41;
 --Text: white;
+--Button: #6E85B2;
 }
 
 /* universal */
@@ -19,4 +20,27 @@ min-height: 100px;
 justify-content: flex-start;
 background-color: var(--Background);
 }
+/* button to begin quiz */
+.main-button   {
+    font-size:50px;
+    height: 70px;
+    line-height: 10px;
+    margin-top: 10px;
+    
+}
+/* button to re-do quiz */
+.reset-button {
+    font-size:50px;
+    height: 70px;
+    line-height: 10px;
+    margin-top: 10px;
 
+}
+/* colors of button */
+button {
+    color:var(--Text);
+    background-color: var(--Button);
+
+
+
+}
