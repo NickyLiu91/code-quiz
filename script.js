@@ -1,54 +1,54 @@
 //create my questions
 var myQuestions = [
 {
-question: "what is Javascript?",
+question: "What is Javascript?",
 answers:{
-a: "dasdasdas",
-b: "adadasdasda",
-c: "adadasdasda",
-d: "adadasdasda",
+a: "Website",
+b: "Computer",
+c: "Markup Language",
+d: "Programming Language",
 },
-correctAnswer: 'b'    
+correctAnswer: 'd'    
 },
 {
-    question: "what is Javascript?",
+    question: "How do you write comments in Javascript?",
     answers:{
-    a: "dasdasdas",
-    b: "adadasdasda",
-    c: "adadasdasda",
-    d: "adadasdasda",
+    a: "//",
+    b: "<!-- -->",
+    c: "/* */",
+    d: "none",
     },
-    correctAnswer: 'b'    
+    correctAnswer: 'a'    
     },
     {
-        question: "what is Javascript?",
+        question: "Which of the following is used for javascript loops?",
         answers:{
-        a: "dasdasdas",
-        b: "adadasdasda",
-        c: "adadasdasda",
-        d: "adadasdasda",
+        a: "for",
+        b: "do not for",
+        c: "condition",
+        d: "if",
         },
-        correctAnswer: 'b'    
+        correctAnswer: 'a'    
         },
         {
-            question: "what is Javascript?",
+            question: "Which of the following is a value of the javascript boolean datatype?",
             answers:{
-            a: "dasdasdas",
-            b: "adadasdasda",
-            c: "adadasdasda",
-            d: "adadasdasda",
+            a: "right",
+            b: "correct",
+            c: "false",
+            d: "return",
             },
-            correctAnswer: 'b'    
+            correctAnswer: 'c'    
             },
             {
-                question: "what is Javascript?",
+                question: "Which of the following is NOT a comparison operator?",
                 answers:{
-                a: "dasdasdas",
-                b: "adadasdasda",
-                c: "adadasdasda",
-                d: "adadasdasda",
+                a: "===",
+                b: "!=",
+                c: ">",
+                d: "!@+",
                 },
-                correctAnswer: 'b'    
+                correctAnswer: 'd'    
                 },
 
 ]
