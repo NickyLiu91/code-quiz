@@ -1,10 +1,69 @@
+//create my questions
+var myQuestions = [
+{
+question: "what is Javascript?",
+answers:{
+a: "dasdasdas",
+b: "adadasdasda",
+c: "adadasdasda",
+d: "adadasdasda",
+},
+correctAnswer: 'b'    
+},
+{
+    question: "what is Javascript?",
+    answers:{
+    a: "dasdasdas",
+    b: "adadasdasda",
+    c: "adadasdasda",
+    d: "adadasdasda",
+    },
+    correctAnswer: 'b'    
+    },
+    {
+        question: "what is Javascript?",
+        answers:{
+        a: "dasdasdas",
+        b: "adadasdasda",
+        c: "adadasdasda",
+        d: "adadasdasda",
+        },
+        correctAnswer: 'b'    
+        },
+        {
+            question: "what is Javascript?",
+            answers:{
+            a: "dasdasdas",
+            b: "adadasdasda",
+            c: "adadasdasda",
+            d: "adadasdasda",
+            },
+            correctAnswer: 'b'    
+            },
+            {
+                question: "what is Javascript?",
+                answers:{
+                a: "dasdasdas",
+                b: "adadasdasda",
+                c: "adadasdasda",
+                d: "adadasdasda",
+                },
+                correctAnswer: 'b'    
+                },
+
+]
+
+
+
+
+
+
+
+
 //declare variables for elements
 var clickBegin = document.querySelector(".header-button");
 var buttonInitiator = document.querySelector(".button-initiator");
 var quizResult = document.querySelector(".quiz-results");
-var scoreCard = document.querySelector(".corect-incorect-section");
-var ScoreCor = document.querySelector(".correct");
-var ScoreIncor= document.querySelector("incorrect");
 var resetQuiz = document.querySelector(".reset-button");
 var quizTimer = document.querySelector(".reset-button");
 var timeText = document.querySelector(".timer-text");
