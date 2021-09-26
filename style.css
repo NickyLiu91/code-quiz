@@ -88,7 +88,7 @@ padding: 10px;
 
 
 /* button to re-do quiz */
-.reset-button, .header-button, .score-button{
+#reset-button, #header-button, #score-button{
     color:var(--Text);
     background-color: var(--Button);
     font-size:50px;

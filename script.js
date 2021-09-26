@@ -15,7 +15,9 @@ var timerCount;
 
 //set the timer off when beggining quiz
 function beginQuiz() {
-timerCount = 180;
+var headerButton = document.getElementById("button-initiator");
+headerButton.setAttribute()
+    timerCount = 180;
 
 
 }
