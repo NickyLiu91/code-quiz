@@ -13,14 +13,12 @@ box-sizing: border-box;
 
 /* this include background color */
 body {
-
+font-family: 'Courier New', Courier, monospace;
 margin: 0;
 display: flex;
 flex-direction: column;
-min-height: 100px;
 justify-content: flex-start;
 background-color: var(--Background);
-color:var(--Text);
 
 }
 /* the easiest code header */
@@ -34,12 +32,11 @@ font-family: 'Courier New', Courier, monospace;
 }
 /*view scores button added to footer */
 footer {
-    text-align: center;
-    border-bottom: 40px;
-    padding: 40px;
-    color:var(--Text);
-    font-size: 50px;
-    font-family: 'Courier New', Courier, monospace;
+text-align: center;
+border-bottom: 10px;
+padding: 40px;
+bottom: auto;
+
     }
 /* organize both sections/white boxes */
 main {
@@ -47,60 +44,62 @@ display:flex;
 flex: wrap;
 justify-content: space-around;
 }
-/* both white boxes */
-section {
-flex: 0 auto;
-  padding: 10px;
-  margin-top: 100px;
-  background-color:var(--Text);
-border-radius: 10px;
-}
-
-/* colors of button */
-button {
-    color:var(--Text);
-    background-color: var(--Button);
-    font-size:50px;
-    height: 70px;
-    line-height: 10px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-/* white-box on the right */
-.quiz-results {
-    width: 25vw;
-    height: 25vw;
-    margin: auto;
-}
 
 /* section the left */
 .quiz-questions {
-width: 60vw;
-height: 25vw;
-margin: auto;
-text-align:center;
-
-
-
-}
-
-/* button to re-do quiz */
-.reset-button {
-    font-size:50px;
-    height: 70px;
-    line-height: 10px;
+    width: 50vw;
+    height: 20vw;
+    text-align:center;
+    word-wrap:break-word;
+    background-color:var(--Text);
+    border-radius: 30px;
+    flex: 0 auto;
+    padding: 10px;
     margin-top: 10px;
-    
+    margin-bottom: 10px;
+    }
+/* white-box on the right */
+.quiz-results {
+    width: 30vw;
+    height: 20vw; 
+    text-align: center;
+    word-wrap:break-word;
+    background-color:var(--Text);
+    border-radius: 30px;
+    flex: 0 auto;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.quiz-timer{
+padding: 10px;
 
 }
+
 /* section on the right */
-.right-wrong-section{
+.correct-incorrect-section{
     color:var(--Text-two);
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
 }
+
+
+
+/* button to re-do quiz */
+.reset-button, .header-button, .score-button{
+    color:var(--Text);
+    background-color: var(--Button);
+    font-size:50px;
+    height: 70px;
+    line-height: 10px;
+    margin-top: 30px;
+    text-align: center;
+    
+
+}
+
 /* this is diplaying the seconds remaining */
 .timer-count{
 
@@ -111,22 +110,18 @@ text-align:center;
 }
 
 
-/* The ready message before button text*/
-.button-initiator{
-    color:var(--Text-two); 
-    text-align: center;
-    font-size: 40px;
-   padding: 90px;
-   font-family: 'Courier New', Courier, monospace;
+/* The ready message before hitting begin button text*/
+.button-initiator {
+   
+    padding: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 30px ;
+    font-size: 30px;
+    
 }
 
-/*begin quzi button*/
-.main-button {
-background-color:white;
-color:var(--Text-two);
-}
-/* this is incorrect/correct anwsers */
-h3 {
+/* this is incorrect/correct anwsers heading*/
+h2 {
 
     color:var(--Text-two); 
     font-size: 25px;
@@ -143,6 +138,7 @@ main {
 .quiz-results, .quiz-questions {
 
     width: 20vw;
+    height: 40px;
 }
 
 
