@@ -28,13 +28,14 @@ font-size: 25px;
 font-family: 'Courier New', Courier, monospace;
 display: flex;
 justify-content: space-around;
+flex-wrap: wrap;
 }
 
 /* organize both sections/white boxes */
 main {
 display:flex;
-
 justify-content: space-around;
+flex-wrap: wrap;
 }
 
 
@@ -73,7 +74,7 @@ padding: 10px;
 }
 
 /* IDs for all buttons */
-#reset-button, #header-button, #score-button{
+#reset-button, #start-button, #score-button{
     color:var(--Text);
     background-color: var(--Button);
     font-size:30px;
@@ -99,4 +100,11 @@ padding: 10px;
     font-family: 'Courier New', Courier, monospace;
     margin-bottom: 30px ;
     font-size: 30px;
+}
+/* add media querys */
+@media screen and (max:width 992px) {
+main { 
+ flex-direction: column;
+
+}
 }

@@ -2,44 +2,47 @@
 <html>
 
 <head>
-<title>Coding Quiz</title>
+    <title>Coding Quiz</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+
 <body>
-<header>
-    <h1>Coding Quiz for Beginners</h1>
-    <button id="score-button"> View High Scores</button>
-</header>
+    <header>
+        <h1>Coding Quiz for Beginners</h1>
+        <button id="score-button"> View High Scores</button>
+    </header>
 
-<main>
-    <section>
-<div class="quiz-questions">
-    <div class="hide-start"> 
-    <p>This quiz contains a series of coding questions, and has a timer.</p>
-    <p>Every time you answer incorrectly, time will be subtracted from the clock.</p>
-    <p>Once you complete the quiz, you can view your score by clicking on the "View High Scores" button on the top-right of the screen.</p>
-    <p>Please click button below when you are ready!</p>
-    <button id="header-button"> Begin Quiz</button>
-</div>
-</div>
-    </section>
-    <section>
-        <div class="quiz-rightbox">
-        <div>
-        </div>
-        <div class="quiz-timer">
-        <div class="timer-text">
-   <h2>Seconds Remaining:</h2>
-            <div class="timer-count">180</div></div>
+    <main>
+        <section>
+            <div class="quiz-questions">
+                <div class="hide-start">
+                    <p>This quiz contains a series of coding questions, and has a timer.</p>
+                    <p>Every time you answer incorrectly, time will be subtracted from the clock.</p>
+                    <p>Once you complete the quiz, you can view your score by clicking on the "View High Scores" button
+                        on the top-right of the screen.</p>
+                    <p>Please click button below when you are ready!</p>
+                </div>
             </div>
-        <button id="reset-button"> Reset Quiz</button>
+        </section>
+        <section>
+            <div class="quiz-rightbox">
+                <div>
+                </div>
+                <div class="quiz-timer">
+                    <div class="timer-text">
+                        <h2>Seconds Remaining:</h2>
+                        <div class="timer-count">180</div>
+                    </div>
+                </div>
+                <button id="start-button"> Begin Quiz</button>
             </div>
-            
-    </section>
 
-</main>
-<script src="script.js"></script>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
 </body>
+
 </html>
