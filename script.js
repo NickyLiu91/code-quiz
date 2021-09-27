@@ -62,35 +62,72 @@ console.log(myQuestions[5]);
 
 
 for (var i = 0; i < myQuestions.length; i++) {
-    console.log("These are my question!" + myQuestions[i]);
+    console.log("These are my questions!" + myQuestions[i]);
 }
 
 
 
 //declare variables for elements
+var checkScore = document.querySelector("#score-button");
+var leftContainer = document.querySelector(".quiz-questions");
+var textGone = document.querySelector(".hide-text");
+var rightContainer = document.querySelector(".quiz-timerbox");
+var timerSection = document.querySelector(".quiz-timer");
+var secondsField = document.querySelector(".timer-text");
+var beginTime = document.querySelector(".timer-count");
 var startButton = document.querySelector("#start-button");
-var buttonInitiator = document.querySelector(".button-initiator");
-var quizResult = document.querySelector(".quiz-results");
-var resetQuiz = document.querySelector(".reset-button");
-var quizTimer = document.querySelector(".reset-button");
-var timeText = document.querySelector(".timer-text");
-var timeCount = document.querySelector(".timer-count");
-var checkScore = document.querySelector(".score-button");
+
+
 
 var timerCount;
+var noWin = false;
+var timer;
+var timercount;
+var rightAnwsers = 0;
+var wrongAnwsers = 0;
 
-//set the timer off when beggining quiz
-function beginQuiz() {
-    console.log("hello");
-    return;
+//press the begin button to begin the quiz
+function beginButton() {
+    noWin = false;
+    timerCount = 800;
+    //prevent begin button from being clicked on when timer is clicking
+    startButton.disabled = true;
+    renderBlanks()
+    startTimer()
 }
-//var headerButton = document.getElementById("button-initiator");
-//headerButton.setAttribute()
-    //timerCount = 180;
+
+//game is over when timer reaches 0
+function finishQuiz() {
+    textGone.textContent = "Quiz is over";
+    wrongAnwsers++
+    startButton.disabled = false;
+
+
+}
+
+//set timer
+
+function startTimer() {
+    timer = setInterval(function () {
+        timerCount--;
+        timeCount.textContent = timerCount;
+        if (timerCount >= 0) {
+
+            if (noWin && timerCount > 0) {
+                clearInterval(timer);
+
+            }
+        }
+        if (timerCount === 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
+}
+
 
 
 //}
 //adding the click event listener to to begin quiz button
 
 // when the user clicks on the startButton element, the beginQuiz function will run
-startButton.addEventListener("click", beginQuiz);
+startButton.addEventListener("click", beginButton);

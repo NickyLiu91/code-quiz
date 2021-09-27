@@ -54,7 +54,7 @@ flex-wrap: wrap;
     box-sizing: border-box;
     }
 /* white-box on the right */
-.quiz-rightbox {
+.quiz-timerbox {
     width: 30vw;
     height: 20vw; 
     text-align: center;
@@ -74,7 +74,7 @@ padding: 10px;
 }
 
 /* IDs for all buttons */
-#reset-button, #start-button, #score-button{
+#start-button, #score-button{
     color:var(--Text);
     background-color: var(--Button);
     font-size:30px;
@@ -94,7 +94,7 @@ padding: 10px;
 }
 
 /* The ready message before hitting begin button text*/
-.hide-start {
+.hide-text {
    
     padding: 25px;
     font-family: 'Courier New', Courier, monospace;
