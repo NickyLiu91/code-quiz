@@ -52,11 +52,7 @@ var myQuestions = [
     },
 ]
 console.log(myQuestions.length);
-console.log(myQuestions[0]);
-console.log(myQuestions[1]);
-console.log(myQuestions[2]);
-console.log(myQuestions[3]);
-console.log(myQuestions[4]);
+
 
 
 
@@ -84,33 +80,16 @@ var answerButton3 = document.querySelector("#answer-button3");
 var answerButton4 = document.querySelector("#answer-button4");
 var questionTitle = document.querySelector("#question-title");
 var question = document.querySelector(".question");
+var enterInitials = document.querySelector("$enter-initials");
+var textBox = document.getElementById("textbox");
 
 
-//var noWin = false;
+//declared variables
 var timer;
-var score = 0;
 var questionNumber = 0;
 var secondsLeft = 60;
-var IncorrectPenalty = 5;
-
-
-//press the begin button to begin the quiz
-function beginButton() {
-    // hide the introText
-    introText.setAttribute('hidden', true)
-    startButton.setAttribute('hidden', true)
-    showQuestions()
-    startTimer()
-}
-
-//game is over when timer reaches 0
-function finishQuiz() {
-    introText.textContent = "Quiz is over";
-    wrongAnwsers++
-    startButton.disabled = false;
-
-
-}
+var IncorrectPenalty = 10;
+var secondsInterval = 0
 
 //set timer
 
@@ -129,27 +108,71 @@ function startTimer() {
             clearInterval(timer);
         }
     }, 1000);
-}
 
+}
+// show the firstQuestion
 function showQuestions() {
-    // show the firstQuestion
     question.removeAttribute("hidden")
     questionTitle.textContent = myQuestions[questionNumber].question
     answerButton1.textContent = myQuestions[questionNumber].answers.a
     answerButton2.textContent = myQuestions[questionNumber].answers.b
     answerButton3.textContent = myQuestions[questionNumber].answers.c
     answerButton4.textContent = myQuestions[questionNumber].answers.d
-
+  
+    
     questionNumber++
 
 }
+
+//press the begin button to begin the quiz
+function beginButton() {
+    // hide the introText
+    introText.setAttribute('hidden', true)
+    startButton.setAttribute('hidden', true)
+    showQuestions()
+    startTimer()
+}
+
+//game is over when timer reaches 0
+function finishQuiz() {
+    introText.textContent = "Quiz is over";
+    wrongAnwsers++
+    startButton.disabled = false;
+
+
+}
+// not sure if needed for button 
+//document.getElementById(scoreButton).onclick = function () {
+    //location.href = "viewscores.html";
+//};
+
+
+var msg = document.getElementById("initials");
+        var enterInitials = document.getElementById("enter-initials");
+        var textBox = document.getElementById("initials");
+  
+        // This event is fired when button is clicked
+        enterInitials.addEventListener("click", function () {
+            var str = textbox.value;
+            console.log(str);
+            msg.innerHTML += "<p>" + str + "</p>";
+        });
+  
+        textBox.addEventListener("keydown", function (event) {
+        }
+    );
+            
+
+
 
 //}
 //adding the click event listener to to begin quiz button
 
 // when the user clicks on the startButton element, the beginQuiz function will run
 startButton.addEventListener("click", beginButton);
+//this will allow a user to select an anwser
 answerButton1.addEventListener("click", showQuestions);
-answerButton2.addEventListener
-answerButton3
-answerButton4
+answerButton2.addEventListener("click", showQuestions);
+answerButton3.addEventListener("click", showQuestions);
+answerButton4.addEventListener("click", showQuestions);
+go

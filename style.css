@@ -40,7 +40,7 @@ flex-wrap: wrap;
 
 
 /* section the left */
-.quiz-questions {
+.quiz-questions, .quiz-scores {
     width: 50vw;
     height: 30vw;
     text-align:center;
@@ -74,7 +74,7 @@ padding: 10px;
 }
 
 /* IDs for all buttons */
-#start-button, #score-button{
+#start-button, #score-button, #goback-button, #enter-initials {
     color:var(--Text);
     background-color: var(--Button);
     font-size:30px;
@@ -85,7 +85,7 @@ padding: 10px;
 }
 
 /* this is diplaying the seconds remaining */
-.timer-count{
+.timer-count {
 
     color:red;
     font-size: 40px;
