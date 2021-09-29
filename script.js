@@ -1,4 +1,4 @@
-//create my questions using gandalf
+//questions array with questions
 var myQuestions = [
     {
         question: "What is Javascript?",
@@ -50,7 +50,6 @@ var myQuestions = [
         },
         correctAnswer: 'd'
     },
-
 ]
 console.log(myQuestions.length);
 console.log(myQuestions[0]);
@@ -58,7 +57,7 @@ console.log(myQuestions[1]);
 console.log(myQuestions[2]);
 console.log(myQuestions[3]);
 console.log(myQuestions[4]);
-console.log(myQuestions[5]);
+
 
 
 for (var i = 0; i < myQuestions.length; i++) {
@@ -67,38 +66,46 @@ for (var i = 0; i < myQuestions.length; i++) {
 
 
 
+
+
+
 //declare variables for elements
-var checkScore = document.querySelector("#score-button");
-var leftContainer = document.querySelector(".quiz-questions");
-var textGone = document.querySelector(".hide-text");
-var rightContainer = document.querySelector(".quiz-timerbox");
-var timerSection = document.querySelector(".quiz-timer");
-var secondsField = document.querySelector(".timer-text");
-var beginTime = document.querySelector(".timer-count");
+var scoreButton = document.querySelector("#score-button");
+var quizQuestions = document.querySelector(".quiz-questions");
+var introText = document.querySelector(".intro-text");
+var quizTimerBox = document.querySelector(".quiz-timerbox");
+var quizTimer = document.querySelector(".quiz-timer");
+var timerText = document.querySelector(".timer-text");
+var timerCount = document.querySelector(".timer-count");
 var startButton = document.querySelector("#start-button");
+var answerButton1 = document.querySelector("#answer-button1");
+var answerButton2 = document.querySelector("#answer-button2");
+var answerButton3 = document.querySelector("#answer-button3");
+var answerButton4 = document.querySelector("#answer-button4");
+var questionTitle = document.querySelector("#question-title");
+var question = document.querySelector(".question");
 
 
-
-var timerCount;
-var noWin = false;
+//var noWin = false;
 var timer;
-var timercount;
-var rightAnwsers = 0;
-var wrongAnwsers = 0;
+var score = 0;
+var questionNumber = 0;
+var secondsLeft = 60;
+var IncorrectPenalty = 5;
+
 
 //press the begin button to begin the quiz
 function beginButton() {
-    noWin = false;
-    timerCount = 800;
-    //prevent begin button from being clicked on when timer is clicking
-    startButton.disabled = true;
-    renderBlanks()
+    // hide the introText
+    introText.setAttribute('hidden', true)
+    startButton.setAttribute('hidden', true)
+    showQuestions()
     startTimer()
 }
 
 //game is over when timer reaches 0
 function finishQuiz() {
-    textGone.textContent = "Quiz is over";
+    introText.textContent = "Quiz is over";
     wrongAnwsers++
     startButton.disabled = false;
 
@@ -109,25 +116,40 @@ function finishQuiz() {
 
 function startTimer() {
     timer = setInterval(function () {
-        timerCount--;
-        timeCount.textContent = timerCount;
-        if (timerCount >= 0) {
+        secondsLeft--;
+        timerCount.textContent = secondsLeft;
+        // if (secondsLeft >= 0) {
 
-            if (noWin && timerCount > 0) {
-                clearInterval(timer);
+        //     if (noWin && secondsLeft > 0) {
+        //         clearInterval(timer);
 
-            }
-        }
-        if (timerCount === 0) {
+        //     }
+        // }
+        if (secondsLeft === 0) {
             clearInterval(timer);
         }
     }, 1000);
 }
 
+function showQuestions() {
+    // show the firstQuestion
+    question.removeAttribute("hidden")
+    questionTitle.textContent = myQuestions[questionNumber].question
+    answerButton1.textContent = myQuestions[questionNumber].answers.a
+    answerButton2.textContent = myQuestions[questionNumber].answers.b
+    answerButton3.textContent = myQuestions[questionNumber].answers.c
+    answerButton4.textContent = myQuestions[questionNumber].answers.d
 
+    questionNumber++
+
+}
 
 //}
 //adding the click event listener to to begin quiz button
 
 // when the user clicks on the startButton element, the beginQuiz function will run
 startButton.addEventListener("click", beginButton);
+answerButton1.addEventListener("click", showQuestions);
+answerButton2.addEventListener
+answerButton3
+answerButton4

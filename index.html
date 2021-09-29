@@ -11,19 +11,28 @@
 <body>
     <header>
         <h1>Coding Quiz for Beginners</h1>
-        <button id="score-button"> View High Scores</button>
+        <button id="score-button" href="viewscores.html"> View High Scores</button>
     </header>
 
     <main>
         <section>
             <div class="quiz-questions">
-                <div class="hide-text">
+                <div class="intro-text">
                     <p>This quiz contains a series of coding questions, and has a timer.</p>
                     <p>Every time you answer incorrectly, time will be subtracted from the clock.</p>
                     <p>Once you complete the quiz, you can view your score by clicking on the "View High Scores" button
                         on the top-right of the screen.</p>
                     <p>Please click the "Begin Quiz" button when you are ready!</p>
                 </div>
+                <div class="question" hidden>
+                    <p id="question-title"></p>
+                    <button id="answer-button1"></button>
+                    <button id="answer-button2"></button>
+                    <button id="answer-button3"></button>
+                    <button id="answer-button4"></button>
+                </div>
+
+                <div class="done" hidden>all done! </div>
             </div>
         </section>
         <section>
@@ -33,7 +42,7 @@
                 <div class="quiz-timer">
                     <div class="timer-text">
                         <h2>Seconds Remaining:</h2>
-                        <div class="timer-count">180</div>
+                        <div class="timer-count">0</div>
                     </div>
                 </div>
                 <button id="start-button"> Begin Quiz</button>
